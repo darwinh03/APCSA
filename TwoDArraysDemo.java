@@ -7,7 +7,7 @@ and accessing its elements.
 */
 import java.util.Arrays;
 
-public class TwoDArrays {
+public class TwoDArraysDemo {
    public static void main(String[] args) {
       // declare a 2D array using "new" keyword
       int rows = 2;
