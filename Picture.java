@@ -111,6 +111,81 @@ public class Picture extends SimplePicture
       keepOnlyBlue() method sets the red and green values at all pixels to zero.
       switchColors() method swaps the color values of pixels.
    */
+   
+   public void keepOnlyBlue() { // method that keeps only the blue values
+      Pixel[][] pixels = this.getPixels2D();
+   
+      for (Pixel[] rowArray : pixels) { // for each that will traverse everything
+         for (Pixel p: rowArray) {
+            p.setRed(0); // makes red 0 
+            p.setGreen(0); // makes green 0 
+         }
+      }
+   }
+   
+   public void switchColors() { // method that will switch the red values with the green values
+      Pixel[][] pixels = this.getPixels2D();
+   
+      for (Pixel[] rowArray : pixels)
+      {
+         for (Pixel p: rowArray)
+         {
+            int green = p.getGreen();
+            p.setRed(green); // switches red values with the green values
+         }
+      }
+   }
+   
+   public void negate() {
+      Pixel[][] pixels = this.getPixels2D();
+   
+      for (Pixel[] rowArray : pixels) // for each to traverse through all elements
+      {
+         for (Pixel p: rowArray)
+         {
+            int green = p.getGreen();
+            int greenNegated = 255 - green;
+            p.setGreen(greenNegated); // sets green to negative
+            int blue = p.getBlue();
+            int blueNegated = 255 - blue;
+            p.setBlue(blueNegated); // sets blue to negative
+            int red = p.getRed();
+            int redNegated = 255 - red;
+            p.setRed(redNegated); // sets red to negative
+         }
+      }   
+   }
+   
+   public void grayScale() { // turns entire picture gray
+      Pixel[][] pixels = this.getPixels2D();
+   
+      for (Pixel[] rowArray : pixels) // uses for each loop to traverse
+      {
+         for (Pixel p: rowArray)
+         {
+            int green = p.getGreen();
+            int blue = p.getBlue();
+            int red = p.getRed();
+            int average = (green + blue + red)/3; // takes average of all colors
+            // sets all pixels to that average
+            p.setBlue(average);
+            p.setGreen(average);
+            p.setRed(average);
+         }
+      }
+   }
+   
+   public void mirrorVertical() { // method flips left side onto right side
+      Pixel[][] pixels = this.getPixels2D();
+   
+      for (Pixel[] rowArray : pixels)
+      {
+         for (Pixel p: rowArray)
+         {
+            
+         }
+      }     
+   }
 
    /* Main method for testing
     */
@@ -130,19 +205,32 @@ public class Picture extends SimplePicture
       arch1.show();
    
       // Uncomment the following code to test your keepOnlyBlue method
-      /*
+
       Picture arch2 = new Picture(fileName);
       System.out.println("Keep only blue:");
       arch2.keepOnlyBlue();// using new method
       arch2.show();
-      */
-      
+            
       // Uncomment the following code to test your switchColors method
-      /*
+
       Picture arch3 = new Picture(fileName);
       System.out.println("Switch colors, set red same as green:");
       arch3.switchColors();// using new method
       arch3.show();
-      */
+      
+      Picture arch4 = new Picture(fileName);
+      System.out.println("Negates all pixels:");
+      arch4.negate();// using new method
+      arch4.show();
+
+      Picture arch5 = new Picture(fileName);
+      System.out.println("Turns picture gray:");
+      arch5.grayScale();// using new method
+      arch5.show();
+      
+      Picture arch6 = new Picture(fileName);
+      System.out.println("Flips left side onto right:");
+      arch6.mirrorVertical();// using new method
+      arch6.show();      
    }
 }
