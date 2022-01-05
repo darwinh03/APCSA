@@ -177,14 +177,19 @@ public class Picture extends SimplePicture
    
    public void mirrorVertical() { // method flips left side onto right side
       Pixel[][] pixels = this.getPixels2D();
-   
-      for (Pixel[] rowArray : pixels)
-      {
-         for (Pixel p: rowArray)
-         {
+      // creates new variables for both sides 
+      Pixel leftSide = null; 
+      Pixel rightSide = null; 
+      int width = pixels[0].length; // finds width of array
+      
+      for ( int row = 0; row < pixels.length; row++ ) {  // traverses rows
+         for ( int col = 0; col < width / 2; col++ ) {  // traverses columns
+            leftSide = pixels[row][col]; 
+            rightSide = pixels[row][width - 1 - col]; // sets right side to left
+            rightSide.setColor( leftSide.getColor() );  // changes color
             
-         }
-      }     
+            } 
+      } 
    }
 
    /* Main method for testing
