@@ -6,7 +6,7 @@ This finds your zodiac sign, chinese sign, and your element!
 */
 import java.util.*;
 
-public class zodiacSign {
+public class ZodiacSign {
    public static void main(String[] args) {
       String sign="";
       String element="";
