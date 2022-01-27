@@ -12,6 +12,17 @@ public class Cat {
    private String name;
    private double weight;
    
+   // constructors 
+   public Cat(String newName, double newWeight) {
+      name = newName;
+      weight = newWeight;
+   }
+   
+   public Cat() {
+      name = "Cat";
+      weight = 5;
+   }
+   
    // define methods (behaviors)
    public void meow() {
       System.out.println(name + " says meow.");
