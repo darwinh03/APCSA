@@ -9,7 +9,7 @@ public class AnimalClinic {
       // create 3 Pet objects, using both of the constructors
       Pet oscar = new Pet();
       Pet phoebe = new Pet();
-      Pet karly = new Pet();
+      Pet karly = new Pet("Karly", 17, 137.7, "Human");
       // creates 3 different pets 
       
       // call every accessor and mutator
@@ -24,30 +24,22 @@ public class AnimalClinic {
       //gets and sets oscar pet
       
       phoebe.setName("Phoebe");
-      phoebe.getName();
+      System.out.println(phoebe.getName());
       phoebe.setWeight(49.7);
-      phoebe.getWeight();
+      System.out.println(phoebe.getWeight());
       phoebe.setAge(3);
       phoebe.getAge();
-      phoebe.setAnimal("Dog");
-      phoebe.getAnimal(); 
+      System.out.println(phoebe.getAge());
+      phoebe.setAnimal("Dog"); 
+      System.out.println(phoebe.getAnimal());
+      System.out.println();
+      
       //gets and sets phoebe pet
-      
-      karly.setName("Karly");
-      karly.getName();
-      karly.setWeight(130.7);
-      karly.getWeight();
-      karly.setAge(17);
-      karly.getAge();
-      karly.setAnimal("Human");
-      karly.getAnimal(); 
-      //gets and sets karly pet
-      
       
       // print out each Pet object
       System.out.println(oscar.toString());
       System.out.println(phoebe.toString());
-      System.out.println(karly.toString());
+      System.out.println(karly);
       // use toString method to print every pet
    }
 }
