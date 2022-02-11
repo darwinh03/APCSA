@@ -11,9 +11,9 @@ We will create Pet instances in the main() method of the AnimalClinic class
 public class Pet {
    // declare private fields for the name, age, weight, and type of animal
    private String name;
-   private int newAge;
-   private double newWeight;
-   private String newTypeOfAnimal;
+   private int age;
+   private double weight;
+   private String typeOfAnimal;
    // write 2 constructors, accessor (get) methods, mutator (set) methods, and 
    // the toString() method. Use good commenting.
    
@@ -41,19 +41,19 @@ public class Pet {
    //setAge mutator
    // sets the age of pet
    public void setAge(int age) {
-      newAge = age;
+      this.age = age;
    }
    
    //setWeight mutator 
    //sets the weight of pet
    public void setWeight(double weight) {
-      newWeight = weight;
+      this.weight = weight;
    }
    
    //setAnimal mutator 
    //sets the type of animal of the pet
    public void setAnimal(String typeOfAnimal) {
-      newTypeOfAnimal = typeOfAnimal;
+      this.typeOfAnimal = typeOfAnimal;
    }
    
    //ACCESSORS
@@ -66,24 +66,24 @@ public class Pet {
    //getAge accessor
    //gets age
    public int getAge() {
-      return this.newAge;
+      return this.age;
    }
    
    //getWeight accessor
    //gets weight
    public double getWeight() {
-      return this.newWeight;
+      return this.weight;
    }
    
    //getAnimal accessor
    //gets type of animal
    public String getAnimal() {
-      return this.newTypeOfAnimal;
+      return this.typeOfAnimal;
    }
    
    //ToString method 
    //method that will return template for output
    public String toString() {
-      return "Pet: name = " + name + " , age = " + newAge + " , weight = " + newWeight + " , type of animal = " + newTypeOfAnimal;
+      return "Pet: name = " + name + " , age = " + age + " , weight = " + weight + " , type of animal = " + typeOfAnimal;
    }
 }
