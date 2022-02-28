@@ -45,5 +45,10 @@ public class ArrayListDemo {
       dinners.remove(4);
       System.out.println(dinners);
       
+      //declare an ArrayList of numbers
+      ArrayList<Integer> numbers = new ArrayList<Integer>();
+      
+      //print out empty list
+      System.out.println(numbers);
    }
 }
