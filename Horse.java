@@ -11,8 +11,8 @@ public class Horse {
    
    // implement a constructor that that takes parameters for name and weight
    public Horse(String name, int weight) {
-      name = this.name;
-      weight = this.weight;
+      this.name = name;
+      this.weight = weight;
    }
    
    // implement accessor methods for the instance variables
