@@ -16,7 +16,7 @@ public class HorseBarn {
    // that is currently occupying the space. A null value indicates an empty space.
    
    // TODO: declare the instance variable "spaces" that is an ArrayList of Horse objects
-   String spaces;
+   ArrayList<Horse> spaces;
    /**
     * Constructor for the HorseBarn class. Loads data from the HorseData.txt file
     * and populates the ArrayList spaces. If a blank line occurs in the data file,
@@ -24,7 +24,7 @@ public class HorseBarn {
     */
    public HorseBarn()  {
       // TODO: create the "spaces" ArrayList using the "new" keyword
-      ArrayList<Horse> spaces = new ArrayList<Horse>();
+      this.spaces = new ArrayList<Horse>();
       // a try is like an if statement, "throwing" an error if the body of the try fails
       try  {
          Scanner scan = new Scanner(new File("HorseData.txt"));
@@ -64,7 +64,7 @@ public class HorseBarn {
     */
     
     // TODO: implement the getSpaces() method
-    public String getSpaces() {
-      return spaces;
+    public ArrayList<Horse> getSpaces() {
+      return(spaces);
     }
 }
