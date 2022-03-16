@@ -61,12 +61,12 @@ public class HorseBarnRunner {
       }
    }
    
-   public static int averageWeight(ArrayList<Horse> list) {
-      int sum; 
+   public static double averageWeight(ArrayList<Horse> list) {
+      double sum = 0.0; 
       for (int num = 0; num < list.size(); num++) {
-         sum += list.getWeight(); 
+         sum += list.get(num).getWeight(); 
       }
-      return sum;
+      return sum / list.size();
    }
 
 }
