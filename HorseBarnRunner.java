@@ -25,23 +25,23 @@ public class HorseBarnRunner {
       double avgWeight = averageWeight(barnSpaces);
       System.out.println("\nAverage weight: " + avgWeight);
       
-//       // find and print the lightest horse
-//       Horse lightestHorse = getMinWeightHorse(barnSpaces);
-//       System.out.print("Lightest Horse: ");
-//       System.out.println(lightestHorse);
-// 
-//       // find and print the index of the heaviest horse
-//       int heavyHorseIndex = getMaxWeightIndex(barnSpaces);
-//       System.out.print("Index of heaviest: ");
-//       System.out.print(heavyHorseIndex);
-//       System.out.println(". " + barnSpaces.get(heavyHorseIndex));
-//       
-//       // replace Trigger with Buttercup
-//       Horse buttercup = new Horse("Buttercup", 1327);
-//       replaceHorse(barnSpaces, "Trigger", buttercup);
-//       System.out.println("\nAfter replace Trigger with Buttercup:");
-//       printHorsesAndIndexes(barnSpaces);
-//       
+      // find and print the lightest horse
+      Horse lightestHorse = getMinWeightHorse(barnSpaces);
+      System.out.print("Lightest Horse: ");
+      System.out.println(lightestHorse);
+      
+      // find and print the index of the heaviest horse
+      int heavyHorseIndex = getMaxWeightIndex(barnSpaces);
+      System.out.print("Index of heaviest: ");
+      System.out.print(heavyHorseIndex);
+      System.out.println(". " + barnSpaces.get(heavyHorseIndex));
+      
+      // replace Trigger with Buttercup
+      Horse buttercup = new Horse("Buttercup", 1327);
+      replaceHorse(barnSpaces, "Trigger", buttercup);
+      System.out.println("\nAfter replace Trigger with Buttercup:");
+      printHorsesAndIndexes(barnSpaces);
+      
 //       // add Coco after Duke
 //       Horse coco = new Horse("Coco", 1497);
 //       addHorseAfter(barnSpaces, "Duke", coco);
@@ -63,10 +63,37 @@ public class HorseBarnRunner {
    
    public static double averageWeight(ArrayList<Horse> list) {
       double sum = 0.0; 
-      for (int num = 0; num < list.size(); num++) {
-         sum += list.get(num).getWeight(); 
+      int counter = 0;
+      for (Horse h : list) {
+         sum += list.get(counter).getWeight();
+         counter++; 
       }
       return sum / list.size();
    }
+   
+   public static Horse getMinWeightHorse(ArrayList<Horse> list) {
+      Horse min = list.get(0);
+      for (int i = 1; i < list.size(); i++) {
+         if (list.get(i).getWeight() < min.getWeight()) {
+            min = list.get(i);
+         }
+     } 
+     return min;
+   }
+   
+   public static int getMaxWeightIndex(ArrayList<Horse> list) {
+      int max = 0;
+      for (int i = 1; i < list.size(); i++) {
+         if (list.get(i).getWeight() > list.get(max).getWeight()) {
+            max = i;
+         }
+     } 
+     return max;
+   }
+   
+   public static void replaceHorse(ArrayList<Horse> list, String newName, Horse oldName) {
+      list.setName(newName); 
+   }
+    
 
 }
