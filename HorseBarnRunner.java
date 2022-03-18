@@ -1,7 +1,6 @@
 /*
 3/9/22
 Darwin Hanson
-
 contains the main() method for testing and print 
 and calls/creates methods that need to be implemented
 */
@@ -93,11 +92,21 @@ public class HorseBarnRunner {
    }
    
    public static void replaceHorse(ArrayList<Horse> list, String oldHorseName, Horse newHorseObject) {
-           
+      for (int num = 0; num < list.size(); num++) {
+         Horse currentHorse = list.get(num);
+         if (oldHorseName.equals(currentHorse.getName())) {
+            list.set(num, newHorseObject);
+         }
+      }       
    }
 
-   public static void addHorseAfter(ArrayList<Horse> list, String horseName, Horse object) {
-      list.add(list.indexOf() - 1 , object);
+   public static void addHorseAfter(ArrayList<Horse> list, String oldHorseName, Horse newHorseObject) {
+      for (int num = 0; num < list.size(); num++) {
+         Horse currentHorse = list.get(num);
+         if (oldHorseName.equals(currentHorse.getName())) {
+            list.add(num + 1, newHorseObject);
+         }
+      }
    }
    
    public static void removeEvenLength(ArrayList<Horse> list) {
