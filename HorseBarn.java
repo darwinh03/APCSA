@@ -2,7 +2,7 @@
 3/9/22
 Darwin Hanson
 
-will contain an ArrayList of Horse objects
+the Horse Barn class creates an ArrayList of Horse objects
 */
 import java.util.ArrayList;
 import java.util.Scanner;
