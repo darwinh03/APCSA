@@ -2,7 +2,7 @@
 3/9/22
 Darwin Hanson
 
-contain the Horse class
+the Horse class has all the accessors, mutators, and constructors to create our horse objects
 */
 public class Horse {
    // declare private instance variables for name and weight
@@ -35,6 +35,6 @@ public class Horse {
    
    // implement a meaningful toString() method
    public String toString() {
-      return "Name: " + name + ", weight: " + weight;
+      return "Horse: name: " + name + ", weight: " + weight;
    }
 }
