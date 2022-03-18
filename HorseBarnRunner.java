@@ -2,7 +2,8 @@
 3/9/22
 Darwin Hanson
 
-contains the main() method, creates a HorseBarn object, and calls methods that need to be implemented
+contains the main() method for testing and print 
+and calls/creates methods that need to be implemented
 */
 import java.util.ArrayList;
 
@@ -42,16 +43,16 @@ public class HorseBarnRunner {
       System.out.println("\nAfter replace Trigger with Buttercup:");
       printHorsesAndIndexes(barnSpaces);
       
-//       // add Coco after Duke
-//       Horse coco = new Horse("Coco", 1497);
-//       addHorseAfter(barnSpaces, "Duke", coco);
-//       System.out.println("\nAdd Coco after Duke:");
-//       printHorsesAndIndexes(barnSpaces);
-//       
-//       // remove horses with even length names
-//       removeEvenLength(barnSpaces);
-//       System.out.println("\nAfter remove even length names:");
-//       printHorsesAndIndexes(barnSpaces);
+      // add Coco after Duke
+      Horse coco = new Horse("Coco", 1497);
+      addHorseAfter(barnSpaces, "Duke", coco);
+      System.out.println("\nAdd Coco after Duke:");
+      printHorsesAndIndexes(barnSpaces);
+     
+      // remove horses with even length names
+      removeEvenLength(barnSpaces);
+      System.out.println("\nAfter remove even length names:");
+      printHorsesAndIndexes(barnSpaces);
    }
    
    public static void printHorsesAndIndexes(ArrayList<Horse> list) {
@@ -77,8 +78,8 @@ public class HorseBarnRunner {
          if (list.get(i).getWeight() < min.getWeight()) {
             min = list.get(i);
          }
-     } 
-     return min;
+      } 
+      return min;
    }
    
    public static int getMaxWeightIndex(ArrayList<Horse> list) {
@@ -87,13 +88,26 @@ public class HorseBarnRunner {
          if (list.get(i).getWeight() > list.get(max).getWeight()) {
             max = i;
          }
-     } 
-     return max;
+      } 
+      return max;
    }
    
-   public static void replaceHorse(ArrayList<Horse> list, String newName, Horse oldName) {
-      list.setName(newName); 
+   public static void replaceHorse(ArrayList<Horse> list, String oldHorseName, Horse newHorseObject) {
+           
+   }
+
+   public static void addHorseAfter(ArrayList<Horse> list, String horseName, Horse object) {
+      list.add(list.indexOf() - 1 , object);
+   }
+   
+   public static void removeEvenLength(ArrayList<Horse> list) {
+      for (int num = 0; num < list.size(); num++) {
+         String name = list.get(num).getName();
+         if (name.length() % 2 == 0) {
+            list.remove(num); 
+            num--;
+         }
+      }
    }
     
-
 }
