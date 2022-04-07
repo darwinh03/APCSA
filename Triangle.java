@@ -25,7 +25,6 @@ public class Triangle extends Shape {
    }
    
    // override the getArea() method
-   // this method should not exist!
    @Override
    public double getArea() {
       double half = 0.5 * (side1 + side2 + side3);  
