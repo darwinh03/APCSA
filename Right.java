@@ -1,7 +1,6 @@
 /*
 Darwin Hanson
 4/4/22
-
 Right triangle extends triangle class
 */
 public class Right extends Triangle { 

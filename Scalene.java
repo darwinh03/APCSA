@@ -1,7 +1,6 @@
 /*
 Darwin Hanson
 4/4/22
-
 Scalene extends triangle class
 */
 public class Scalene extends Triangle { 
@@ -16,4 +15,4 @@ public class Scalene extends Triangle {
    public String toString() { 
       return "Scalene Triangle: " + super.toString(); 
    } 
-} 
+}

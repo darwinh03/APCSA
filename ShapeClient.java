@@ -17,14 +17,14 @@ public class ShapeClient {
    Shape rectangle2 = new Rectangle(2, 1);  
    Shape square1 = new Square(6);  
    Shape square2 = new Square(14);  
-   Shape isosceles1 = new Isosceles(12.3, 12.5);  
-   Shape isosceles2 = new Isosceles(19.2, 1.2);  
-   Shape equilateral1 = new Equilateral(10.4);  
-   Shape equilateral2 = new Equilateral(6.7);  
-   Shape scalene1 = new Scalene(56.5, 87.2, 59.1);  
-   Shape scalene2 = new Scalene(3.4, 7.8, 5.5);  
-   Shape right1 = new Right(5.3, 9.3);  
-   Shape right2 = new Right(9.7, 6.0);  
+   Shape isosceles1 = new Isosceles(12.1, 11.3);  
+   Shape isosceles2 = new Isosceles(190.0 , 169.2);  
+   Shape equilateral1 = new Equilateral(12);  
+   Shape equilateral2 = new Equilateral(11.2);  
+   Shape scalene1 = new Scalene(37.1, 87.2, 59.1);  
+   Shape scalene2 = new Scalene(3.9, 7.1, 5.9);  
+   Shape right1 = new Right(5.1, 9.0);  
+   Shape right2 = new Right(9.4, 5.0);  
   
    // put the objects into a new ArrayList  
    ArrayList<Shape> shapes = new ArrayList<Shape>();  
@@ -56,7 +56,7 @@ public class ShapeClient {
       double minArea = input.get(0).getArea();  
       int minIndex = 0;  
       // for-loop to identify where the smallest area value index is  
-      for ( int k = 0; k < input.size(); k++ ) { 
+      for (int k = 0; k < input.size(); k++ ) { 
          if ( input.get(k).getArea() < minArea ) { 
             minArea = input.get(k).getArea(); 
             minIndex = k; 

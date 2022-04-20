@@ -1,7 +1,6 @@
 /* 
 Darwin Hanson
 4/4/22 
-
 Square is a type of rectangle, extends rectangle class
 */
 public class Square extends Rectangle {
@@ -15,5 +14,4 @@ public class Square extends Rectangle {
    public String toString() { 
       return "Square: " + super.toString(); 
    } 
-} 
-
+}

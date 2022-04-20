@@ -1,7 +1,6 @@
 /*
 Darwin Hanson
 4/4/22
-
 equilateral extends the triangle class
 */
 public class Equilateral extends Triangle { 
@@ -16,4 +15,4 @@ public class Equilateral extends Triangle {
    public String toString() { 
       return "Equilateral Triangle: " + super.toString();  
    } 
-} 
+}

@@ -1,7 +1,6 @@
 /*
 Darwin Hanson
 4/4/22
-
 Rectangle is a sublass of Shape class
 */
 public class Rectangle extends Shape { 

@@ -42,11 +42,9 @@ public class Shape {
    // equals() method checks if two shapes are equal
    // inherited from Object and takes parameter of type Object
    @Override
-   public boolean equals(Object other) {
-      // will return true if areas match and perimeters match
-      // must downcast the Object parameter to Shape
-      // use "instanceof" operator to ensure downcast is safe
-      
-      return true;   
-   }
+   public boolean equals (Object other) { 
+      if (other instanceof Shape) { Shape otherObj = (Shape) other; return (this.getArea() == otherObj.getArea()) &&  (this.getPerimeter() == otherObj.getPerimeter());  } 
+         return false;  
+ } 
+
 }

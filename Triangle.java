@@ -1,7 +1,6 @@
 /*
 Darwin Hanson
 4/4/2022
-
 Triangle class is subclass of Shape class
 */
 
@@ -15,7 +14,7 @@ public class Triangle extends Shape {
    public Triangle(double side1, double side2, double side3) {
       if ( !(side1 + side2 > side3) || !(side1 + side3 > side2) || !(side2 + side3 > side2) ) {
          // can also supply an informative message
-         throw new IllegalArgumentException("informative message");
+         throw new IllegalArgumentException("These side lengths don't create a triangle!");
       }
       
       // assign the instance variables
@@ -33,4 +32,11 @@ public class Triangle extends Shape {
       return (findArea);  
 
    }
+   
+   //overide getPerimeter method
+   @Override 
+   public double getPerimeter() { 
+      return side1 + side2 + side3; 
+   }
 }
+
