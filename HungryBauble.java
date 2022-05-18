@@ -9,7 +9,7 @@ import java.awt.Color;
 import ihs.apcs.spacebattle.*;
 import ihs.apcs.spacebattle.commands.*;
 
-public class FindTheMiddleShip extends BasicSpaceship {
+public class HungryBauble extends BasicSpaceship {
 
    public int width;
    public int height; 
@@ -17,7 +17,7 @@ public class FindTheMiddleShip extends BasicSpaceship {
    public static void main(String[] args) {
       // "10.40.30.98" is the IP address of Mr. Stutler's projector computer
       // "FindTheMiddleShip" is the name of the current class
-      TextClient.run("10.40.30.98", new FindTheMiddleShip());
+      TextClient.run("10.40.30.98", new HungryBauble());
    }
 
    @Override
